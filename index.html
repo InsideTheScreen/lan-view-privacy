@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="lan-view-policy-version" content="2026-10-27-beta1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>LAN View privacy statement and prototype terms</title>
+<style>body{margin:0;background:#101820;color:#e7eef4;font:16px/1.7 system-ui,sans-serif}main{max-width:820px;margin:auto;padding:40px 24px 70px}h1,h2{line-height:1.25}h1{font-size:36px}h2{margin-top:36px;font-size:23px}a{color:#a8efc0}small,.muted{color:#b1bfca}.notice{border:1px solid #486451;padding:18px;border-radius:10px}li{margin:8px 0}footer{margin-top:40px;border-top:1px solid #486451;padding-top:20px}</style>
+</head>
+<body><main>
+<p class="muted">LAN VIEW · WINDOWS RECEIVER BETA</p>
+<h1>LAN View privacy statement</h1>
+<p>Version: 2026-10-27-beta1. Prepared October 27, 2026.</p>
+<p class="notice">LAN View is an independent experimental application for viewing normal gameplay from a console you own or are authorized to use. Live Xbox compatibility, streaming-service authorization and enforcement outcomes have not been certified. A published privacy statement is not Microsoft approval.</p>
+<h2>Maintainer and contact</h2>
+<p>Project maintainer: <a href="https://github.com/InsideTheScreen">InsideTheScreen</a>. For privacy questions, use the <a href="https://github.com/InsideTheScreen/lan-view-privacy/issues">LAN View privacy repository's Issues page</a>. Issues are public: do not post passwords, account tokens, payment details, private logs or other sensitive personal information. Ask the maintainer to arrange an appropriate private contact route before supplying personal details.</p>
+<h2>Information the app uses</h2>
+<p>The app reads its own local configuration, including the public privacy-page URL and the public application identifier you enter. The native process checks this published page at startup and approximately every five minutes while the app is open, comparing it to the bundled policy. These ordinary HTTPS requests disclose the requesting internet address and generic client/request metadata to GitHub and its delivery providers. No account tokens, console identifiers or gameplay are included in a privacy-page request.</p>
+<p>Only when you choose Microsoft sign-in, the native process sends your configured application ID and Xbox sign-in scopes to Microsoft. You enter your password and complete verification on Microsoft's site; LAN View does not receive your password. Microsoft may issue access, refresh, Xbox and streaming-service tokens. LAN View uses them to request your associated consoles and to establish, maintain and end the selected home-streaming session. This involves console names/identifiers, service region/session identifiers and media negotiation information, including network addresses.</p>
+<p>Authentication and session signaling use Microsoft's internet services. The LAN media only option filters media candidates; it is not a system firewall or proof of complete isolation. Video and audio are received and decoded for playback. LAN View does not record gameplay, use your microphone/camera, send gameplay controls or intercept another application's traffic.</p>
+<h2>Storage, disclosure and security</h2>
+<p>Application-managed account tokens stay in native-process memory. They are not saved to application token files, exported to the local viewer page, sent to this privacy website or included in generated receiver-check reports. Sign-out and exit drop the app's token references. This does not securely erase every Windows memory, paging or crash-dump copy.</p>
+<p>The app saves only its public privacy URL and your local notice-review preference in receiver-settings.json. The application ID entered in the current beta is not saved as an account credential. WebView2 uses a dedicated local Profile directory. Windows, WebView2 and Microsoft services may retain their own caches, diagnostics or service records. LAN View adds no advertising or analytics, does not sell this information, and has no OpenAI/ChatGPT API integration or AI account credentials. The software's normal operation does not make requests to OpenAI.</p>
+<p>Necessary authentication/session information goes to Microsoft's endpoints, and necessary media-control messages go to the selected session. Microsoft describes its handling in the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>. GitHub describes visitor/request and issue information in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. GitHub Pages logs visitor IP addresses for security. This page has no forms, scripts, cookies set by the page, external fonts or advertising pixels.</p>
+<h2>Your controls and retention</h2>
+<ul>
+<li>Until the published policy matches the bundled version and you have reviewed the notices locally, the main receiver interface stays gated. No Microsoft sign-in request is automatic.</li>
+<li>Stop releases local media and requests cleanup of this app's streaming session. Cancel/sign out cancels pending app work, requests session cleanup and drops authorization references.</li>
+<li>Emergency shutdown is available during startup and use. It blocks new app work and ends the app and its own processes, with a bounded attempt at ordinary session cleanup. It cannot retract earlier requests, erase Microsoft's records, guarantee remote cleanup or guarantee protection from enforcement.</li>
+<li>If a later policy-availability/content check fails, the beta stops its own activity and exits. You may correct the setup and relaunch. Successful checks are point-in-time checks, not a continuous uptime or legal-compliance guarantee.</li>
+<li>Receiver-check reports are generated only from the local synthetic test and saved only when you choose Save report and a destination. They contain technical measurements, not gameplay recordings or account tokens. You control subsequent sharing and deletion.</li>
+<li>Close LAN View before deleting its dedicated application folder, Profile, receiver-settings.json or saved reports to remove local data. Unrelated browser and Xbox data are not erased. Microsoft may retain consent/service records; manage account permissions through Microsoft.</li>
+<li>For access, correction or deletion questions about any information you voluntarily shared with the maintainer, contact the maintainer using the route above. The app has no maintainer-operated account database. GitHub and Microsoft provide controls for data they independently hold.</li>
+</ul>
+<h2>Changes to this statement</h2>
+<p>Changes receive a new version and must be kept consistent with the app's bundled copy. A changed public page will fail the beta's exact-content check until the updated copy is bundled and reviewed. The repository provides a public change history. You do not need to publish your app, transcripts, screenshots or credentials to host this statement.</p>
+<h2>Prototype terms</h2>
+<p>The maintainer permits personal evaluation of LAN View subject to your existing Microsoft/Xbox agreements and all rights needed to access your own console and content. Preserve supplied third-party licenses and notices. These terms grant no Microsoft service, game, content or API rights. LAN View is independent and experimental; no Microsoft sponsorship, approval or support is represented.</p>
+<p>Compatibility, continuous audio/video, resolution, frame rate, latency and enforcement outcomes are not guaranteed. To the fullest extent permitted by applicable law, Microsoft and its affiliates provide no warranties for LAN View and assume no liability arising from this application. Nothing here removes rights that applicable law does not permit to be excluded.</p>
+<p>Use authorized accounts/consoles, respect service refusals and protected content, and do not use this app to modify console firmware, game or profile data or to interfere with other players. The application does not enroll you in a paid plan, create an account, activate hosting or authorize billing.</p>
+<footer><small>This is the public document prepared for the beta. Publication and local notice review are separate from authentication and streaming-service permission.</small></footer>
+</main></body></html>
